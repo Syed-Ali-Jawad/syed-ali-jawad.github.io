@@ -315,7 +315,7 @@ p {
 }
 .outer-circle {
   width: 20px;
-  height: 30px;
+  height: 25px;
   border: 2px dashed lightgray;
   border-radius: 50%;
   background-color: white;
