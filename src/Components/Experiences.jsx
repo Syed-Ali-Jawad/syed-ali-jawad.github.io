@@ -2,12 +2,33 @@ import { useEffect, useState } from "react";
 import AddExerience from "./AddExperience";
 
 export default function Experiences() {
+  const experiences = [
+    {
+      id: 1,
+      logo: "Systems logo.jpeg",
+      company: "Systems Limited",
+      periodServed: "March 2024 - May 2024",
+      positon: "Intern - Cloud Application Development and Mobility",
+      description:
+        "Gained knowledge and skills in React front-end web development with a focus on building dynamic user interfaces. Build a practice project utilizing react routers, Context API, JSON Server and Ant Design. Build a book e-commerce stores utilizing react routers, Redux Toolkit, JSON Server and Ant Design.",
+    },
+    {
+      id: 2,
+      logo: "Volpea logo.jpeg",
+      company: "Volpea Solutions",
+      periodServed: "5 Aug - Present",
+      positon: "Trainee Frontend Developer",
+      description:
+        " Learning and applying Angular by developing a practice project of a clothing e-commerce website.",
+    },
+  ];
   return (
-    <div className="experiences">
+    <div className="experiences" id="experience">
       <h1>Experiences</h1>
       <div className="experiences-div">
-        <AddExerience totalExperinces={1} />
-        <AddExerience totalExperinces={2} />
+        {experiences.map((experince, index) => (
+          <AddExerience key={index} {...experince} />
+        ))}
       </div>
     </div>
   );

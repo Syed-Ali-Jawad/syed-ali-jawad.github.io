@@ -1,5 +1,10 @@
 body {
   scroll-behavior: smooth;
+  margin: 0;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 @font-face {
   font-family: "flinq-bold";

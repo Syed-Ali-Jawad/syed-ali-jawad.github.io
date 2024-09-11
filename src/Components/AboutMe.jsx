@@ -1,18 +1,22 @@
+import { useNavigate } from "react-router-dom";
+
 export default function AboutMe() {
+  const navigate = useNavigate();
   return (
-    <div className="about-me">
-      <div className="about-me-pic">
-        <img src="" />
-      </div>
+    <div className="about-me" id="about-me">
       <div className="about-me-details">
-        <h3>I'm a person</h3>
+        <h3>I'm a Frontend Developer</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et
-          cumque iste corrupti. Unde quibusdam officiis laboriosam earum
-          ducimus, tenetur quaerat provident pariatur tempore asperiores officia
-          accusamus dignissimos possimus expedita!
+          A Frontend Developer with a strong focus on building dynamic and
+          user-friendly web applications. My journey into tech, despite coming
+          from a non-CS background, has been driven by curiosity and a love for
+          problem-solving. Through continuous learning and hands-on experience,
+          I have mastered frameworks like React and Angular, always eager to
+          embrace new tools and technologies. I thrive in environments that
+          challenge me to grow and innovate, and I am committed to staying at
+          the forefront of frontend development.
         </p>
-        <button>See Work</button>
+        <button onClick={() => navigate("/projects")}>See Work</button>
       </div>
     </div>
   );
