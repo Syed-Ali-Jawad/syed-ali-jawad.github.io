@@ -9,6 +9,7 @@ import expenseEaseProject from "../assets/ExpenseEase.png";
 import ContactMe from "../Components/ContactMe";
 import { useNavigate } from "react-router-dom";
 import { UpwardArrow } from "../assets/icons";
+import { projects } from "./ProjectsPage";
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,18 +37,8 @@ export default function HomePage() {
         <div className="projects-section" id="projects">
           <h1>My Work & Projects</h1>
           <div className="projects">
-            <ProjectCard
-              name="ShopCo"
-              description="ShopCo is a practice project showcasing a clothing e-commerce platform developed with Angular and Angular Material. It features a sleek, responsive design that provides a smooth browsing experience. The application utilizes an API to dynamically fetch and display product information, allowing users to explore a wide range of fashion items seamlessly."
-              image="ShopCo.png"
-              link="https://syed-ali-jawad.github.io/ShopCo/home"
-            />
-            <ProjectCard
-              name="ExpenseEase"
-              description="ExpenseEase is a comprehensive expense and income tracking React application. It allows users to add and manage expenses across various categories, and incomes from different sources and accounts. The application visualizes financial data through interactive line charts, pie charts, and detailed tables, enabling users to easily track and analyze their financial activities."
-              image="ExpenseEase.png"
-              link="https://syed-ali-jawad.github.io/ExpenseEase/"
-            />
+            <ProjectCard {...projects[0]} />
+            <ProjectCard {...projects[1]} />
           </div>
           <button onClick={() => navigate("/projects")}>View More</button>
         </div>

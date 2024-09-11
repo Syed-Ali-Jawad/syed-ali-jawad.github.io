@@ -7,7 +7,7 @@ export default function ProjectCard({ name, description, link, image }) {
     >
       <div
         className="project-image"
-        style={{ backgroundImage: `url(src/assets/${image})` }}
+        style={{ backgroundImage: `url(${image})` }}
       ></div>
       <div
         style={{

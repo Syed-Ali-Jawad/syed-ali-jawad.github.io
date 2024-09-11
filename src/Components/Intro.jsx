@@ -1,5 +1,6 @@
 import { AngularColored, ReactBlueIcon } from "../assets/icons";
 import ReactTypingEffect from "react-typing-effect";
+import IntroPic from "../assets/my pic for intro.png";
 
 export default function Intro() {
   return (
@@ -45,7 +46,7 @@ export default function Intro() {
       </p>
       <button>Download My CV</button>
       <div className="semi-circle-intro">
-        <img src="src/assets/my pic for intro.png" />
+        <img src={IntroPic} />
       </div>
     </div>
   );

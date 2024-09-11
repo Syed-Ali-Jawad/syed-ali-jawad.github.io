@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import AddExerience from "./AddExperience";
+import SystemsLogo from "../assets/Systems logo.jpeg";
+import VolpeaLogo from "../assets/Volpea logo.jpeg";
 
 export default function Experiences() {
   const experiences = [
     {
       id: 1,
-      logo: "Systems logo.jpeg",
+      logo: SystemsLogo,
       company: "Systems Limited",
       periodServed: "March 2024 - May 2024",
       positon: "Intern - Cloud Application Development and Mobility",
@@ -14,7 +16,7 @@ export default function Experiences() {
     },
     {
       id: 2,
-      logo: "Volpea logo.jpeg",
+      logo: VolpeaLogo,
       company: "Volpea Solutions",
       periodServed: "5 Aug - Present",
       positon: "Trainee Frontend Developer",

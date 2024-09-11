@@ -11,7 +11,7 @@ export default function AddExerience({
       return (
         <div className="experience-div">
           <div className="company" style={{ textAlign: "right" }}>
-            <img src={"../src/assets/" + logo} />
+            <img src={logo} />
             <h3>{company}</h3>
             <p>{periodServed}</p>
           </div>
@@ -42,7 +42,7 @@ export default function AddExerience({
           </div>
 
           <div className="company" style={{ textAlign: "left" }}>
-            <img src={"../src/assets/" + logo} />
+            <img src={logo} />
             <h3>{company}</h3>
             <p>{periodServed}</p>
           </div>
@@ -59,7 +59,7 @@ export default function AddExerience({
           <hr className="vertical-line" />
         </div>
         <div className="company" style={{ textAlign: "left" }}>
-          <img src={"../src/assets/" + logo} />
+          <img src={logo} />
           <h3>{company}</h3>
           <p>{periodServed}</p>
 
