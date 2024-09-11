@@ -23,18 +23,7 @@ export default function Intro() {
           typingDelay={100}
           text={["React Developer", "Angular Developer", "Frontend Developer"]}
           displayTextRenderer={(text, i) => {
-            return (
-              <h4>
-                {text.split("").map((char, i) => {
-                  const key = `${i}`;
-                  return (
-                    <span key={key} style={{ color: "#f0a418" }}>
-                      {char}
-                    </span>
-                  );
-                })}
-              </h4>
-            );
+            return <h4 style={{ color: "#f0a418" }}>{text}</h4>;
           }}
         />
       </h3>
