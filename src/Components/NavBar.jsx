@@ -22,7 +22,7 @@ export default function NavBar({ scrolled }) {
           <HashLink smooth to="/#experience">
             Experience
           </HashLink>
-          <HashLink smooth to="/projects">
+          <HashLink smooth to="/projects#list">
             Projects
           </HashLink>
           <HashLink smooth to="#contact-me">
@@ -97,7 +97,7 @@ export default function NavBar({ scrolled }) {
           <HashLink onClick={toggleMenu} smooth to="/#experience">
             Experience
           </HashLink>
-          <HashLink onClick={toggleMenu} smooth to="/projects#projects">
+          <HashLink onClick={toggleMenu} smooth to="/projects#list">
             Projects
           </HashLink>
 

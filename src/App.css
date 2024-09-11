@@ -115,8 +115,10 @@ body {
 }
 .intro-section a {
   width: unset;
-  padding: 8px 16px;
+  padding: 12px 16px;
   font-family: sans-serif;
+  font-size: medium;
+  font-weight: 500;
 }
 .intro-section a:hover,
 .projects-section button:hover {
@@ -469,8 +471,8 @@ a:hover {
     fill: white;
   }
   .about-me-details button {
-    width: 50%;
-    padding: 5% 0;
+    width: 40%;
+    padding: 4% 0;
   }
   .about-me-details {
     display: block;
@@ -538,8 +540,9 @@ a:hover {
   }
   .projects-section button {
     width: 40%;
-
+    margin-top: 15%;
     padding: 4% 0;
+
     color: white;
     font-weight: bold;
   }
@@ -559,6 +562,7 @@ a:hover {
     padding-top: 5%;
     width: 100vw;
   }
+
   .semi-circle-intro {
     width: 300px;
     height: 150px;
@@ -620,5 +624,10 @@ a:hover {
   }
   .contact-btn-navbar {
     background-color: #f0a418;
+  }
+  .intro-section a {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    margin-top: 5%;
   }
 }

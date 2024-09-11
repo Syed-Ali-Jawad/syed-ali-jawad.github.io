@@ -74,7 +74,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <div id="projects">
+      <div id="list">
         <NavBar scrolled={true} />
         <div className="projects-section" style={{ marginTop: "3%" }}>
           <h1>My Work & Projects</h1>
