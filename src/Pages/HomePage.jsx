@@ -13,10 +13,13 @@ import { projects } from "./ProjectsPage";
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
+  const [showGoToTop, setShowGoToTop] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    const handleSroll = () =>
-      window.scrollY > 100 ? setScrolled(true) : setScrolled(false);
+    const handleSroll = () => {
+      setScrolled(window.scrollY > 100);
+      setShowGoToTop(window.scrollY > 200);
+    };
     window.addEventListener("scroll", () => handleSroll());
     return window.removeEventListener("scroll", () => handleSroll());
   }, []);
@@ -24,11 +27,8 @@ export default function HomePage() {
     <>
       <div className="home-page" id="intro">
         <div className="gradient">
-          {window.innerWidth <= 768 ? (
-            <NavBar scrolled={true} />
-          ) : (
-            <NavBar scrolled={scrolled} />
-          )}
+          <NavBar scrolled={scrolled} />
+
           <Intro />
         </div>
         <AboutMe />
@@ -44,7 +44,7 @@ export default function HomePage() {
         </div>
       </div>
       <ContactMe />
-      {window.scrollY > 100 && window.innerWidth > 768 ? (
+      {showGoToTop ? (
         <div className="upward-arrow" onClick={() => window.scrollTo(0, 0)}>
           <UpwardArrow />
         </div>

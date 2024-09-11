@@ -7,60 +7,36 @@ export default function NavBar({ scrolled }) {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   const toggleMenu = () => setIsMenuClicked((prevValue) => !prevValue);
+
   return (
     <>
-      <div
-        className="navbar"
-        style={
-          scrolled
-            ? {
-                backgroundColor: "white",
-                transition: "background-color 1000ms linear",
-                transition: "box-shadow 300ms linear",
-                boxShadow: "0 2px 2px lightgray",
-              }
-            : {
-                backgroundColor: "transparent",
-                transition: "background-color 1000ms linear",
-                transition: "box-shadow 300ms linear",
-              }
-        }
-      >
+      <div className={`navbar ${scrolled ? "nav-scrolled" : ""}`}>
         <h1>Ali Jawad</h1>
-        {window.innerWidth <= 768 ? null : (
-          <div className="navbar-btns">
-            <HashLink smooth to="/#intro">
-              Home
-            </HashLink>
-            <HashLink smooth to="/#about-me">
-              About Me
-            </HashLink>
-            <HashLink smooth to="/#experience">
-              Experience
-            </HashLink>
-            <HashLink smooth to="/projects#projects">
-              Projects
-            </HashLink>
-            <HashLink smooth to="#contact-me">
-              Contact Me
-            </HashLink>
-          </div>
-        )}
+        <div className="navbar-btns">
+          <HashLink smooth to="/#intro">
+            Home
+          </HashLink>
+          <HashLink smooth to="/#about-me">
+            About Me
+          </HashLink>
+          <HashLink smooth to="/#experience">
+            Experience
+          </HashLink>
+          <HashLink smooth to="/projects">
+            Projects
+          </HashLink>
+          <HashLink smooth to="#contact-me">
+            Contact Me
+          </HashLink>
+        </div>
         <div className="contact-icons-navbar">
           <div
+            className="contact-btn-navbar"
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/ali-jawad-9b6a1020a/",
                 "_blank"
               )
-            }
-            style={
-              scrolled
-                ? {
-                    backgroundColor: "#f0a418",
-                    transition: "background-color 300ms linear",
-                  }
-                : { backgroundColor: "#f9fafb", border: "1px solid lightgray" }
             }
           >
             <svg
@@ -72,7 +48,6 @@ export default function NavBar({ scrolled }) {
               viewBox="0,0,256,256"
             >
               <g
-                fill={scrolled ? "white" : "darkgray"}
                 fillRule="nonzero"
                 stroke="none"
                 strokeWidth="1"
@@ -95,34 +70,24 @@ export default function NavBar({ scrolled }) {
           </div>
           <div
             onClick={() => window.open("mailto:alijawad04@gmail.com", "_blank")}
-            style={
-              scrolled
-                ? {
-                    backgroundColor: "#f0a418",
-                    transition: "background-color 300ms linear",
-                  }
-                : { backgroundColor: "#f9fafb", border: "1px solid lightgray" }
-            }
+            className="contact-btn-navbar"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="15px"
               viewBox="0 -960 960 960"
               width="15px"
-              fill={scrolled ? "white" : "gray"}
             >
               <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
             </svg>
           </div>
-          {window.innerWidth <= 768 ? (
-            <div onClick={toggleMenu}>
-              <Hamburger />
-            </div>
-          ) : null}
+          <div className="menu-icon" onClick={toggleMenu}>
+            <Hamburger />
+          </div>
         </div>
       </div>
       {isMenuClicked ? (
-        <div className="nav-btns-list navbar-btns">
+        <div className="nav-btns-list navbar-btns-menu">
           <HashLink onClick={toggleMenu} smooth to="/#intro">
             Home
           </HashLink>

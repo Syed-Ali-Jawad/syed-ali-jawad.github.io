@@ -2,7 +2,7 @@ import NavBar from "../Components/NavBar";
 import ProjectCard from "../Components/ProjectCard";
 import ContactMe from "../Components/ContactMe";
 import { UpwardArrow } from "../assets/icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ShopCo from "../assets/ShopCo.png";
 import ExpenseEase from "../assets/ExpenseEase.png";
 import TempTeller from "../assets/TempTeller.png";
@@ -63,7 +63,15 @@ export const projects = [
 ];
 
 export default function ProjectsPage() {
-  useEffect(() => window.scrollTo(0, 0), []);
+  const [showGoToTop, setShowGoToTop] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const handleSroll = () => setShowGoToTop(window.scrollY > 200);
+    window.addEventListener("scroll", () => handleSroll());
+    return window.removeEventListener("scroll", () => handleSroll());
+  }, []);
+
   return (
     <>
       <div id="projects">
@@ -79,7 +87,7 @@ export default function ProjectsPage() {
         </div>
         <ContactMe />
       </div>
-      {window.scrollY > 100 && window.innerWidth > 768 ? (
+      {showGoToTop ? (
         <div className="upward-arrow" onClick={() => window.scrollTo(0, 0)}>
           <UpwardArrow />
         </div>

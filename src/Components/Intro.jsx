@@ -33,7 +33,9 @@ export default function Intro() {
         modern technologies, I thrive on solving challenges and embracing
         innovation in the ever-evolving field of frontend development.
       </p>
-      <button>Download My CV</button>
+      <a href="/CV - Ali Jawad.pdf" download>
+        Download My CV
+      </a>
       <div className="semi-circle-intro">
         <img src={IntroPic} />
       </div>
