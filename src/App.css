@@ -177,6 +177,10 @@ p {
 }
 .experience-div h3 {
   font-family: sans-serif;
+  margin:2% 0
+}
+.experience-div p{
+  margin:10px 0
 }
 .about-me {
   padding-top: 70px;
@@ -503,7 +507,7 @@ a:hover {
   }
   .experiences {
     display: block;
-    margin-bottom: 20%;
+    padding: 50px 0;
   }
   .upward-arrow {
     display: none;
@@ -514,7 +518,7 @@ a:hover {
   }
   .experience-div {
     grid-template-columns: 10% 1fr;
-    height: 300px;
+    height: 100%;
     width: 80%;
     gap: 5%;
   }
@@ -527,8 +531,7 @@ a:hover {
   }
   .projects-section {
     row-gap: 10px;
-  }
-  .projects-section {
+    padding: 40px 0;
     display: block;
     margin: auto;
     width: 80%;
