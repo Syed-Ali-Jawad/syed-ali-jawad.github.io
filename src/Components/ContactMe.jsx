@@ -68,9 +68,9 @@ export default function ContactMe() {
         </div>
         <div
           onClick={() =>
-            !window.innerWidth <= 767
-              ? copyPhoneNumber()
-              : window.open("tel:+923400961779")
+            window.innerWidth <= 767
+              ? window.open("tel:+923400961779")
+              : copyPhoneNumber()
           }
           className="contact-me-btn"
         >
