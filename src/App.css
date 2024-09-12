@@ -541,7 +541,7 @@ a:hover {
   }
   .experiences h1 {
     margin-left: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   .experience-div {
     grid-template-columns: 10% 1fr;
