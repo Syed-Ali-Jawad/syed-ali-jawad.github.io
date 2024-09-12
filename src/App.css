@@ -177,10 +177,10 @@ p {
 }
 .experience-div h3 {
   font-family: sans-serif;
-  margin:2% 0
+  margin: 2% 0;
 }
-.experience-div p{
-  margin:10px 0
+.experience-div p {
+  margin: 10px 0;
 }
 .about-me {
   padding-top: 70px;
@@ -236,6 +236,33 @@ p {
 .skill-card:hover .skill-card-logo {
   background-color: #f0a418;
   transition: background-color 500ms linear;
+}
+.responsibilities {
+  text-align: right;
+}
+.responsibilities h3 {
+  text-align: end;
+}
+.responsibilities p {
+  text-align: right;
+}
+.company {
+  text-align: left;
+}
+.reversed {
+  direction: rtl;
+}
+.reversed .responsibilities {
+  text-align: left;
+}
+.reversed .responsibilities h3 {
+  text-align: end;
+}
+.reversed .responsibilities p {
+  text-align: left;
+}
+.reversed .company {
+  text-align: right;
 }
 @keyframes icon-rotation {
   0% {
@@ -296,7 +323,7 @@ p {
 .experience-div {
   display: grid;
   grid-template-columns: 1fr 5% 1fr;
-  height: 180px;
+  height: 100%;
   width: 80%;
   margin: auto;
 }
@@ -310,7 +337,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 180px;
 }
 .vertical-line {
   border-right: 4px dashed lightgray;
@@ -521,6 +548,7 @@ a:hover {
     height: 100%;
     width: 80%;
     gap: 5%;
+    grid-template-rows: 110px 1fr;
   }
   .projects {
     margin-left: -5%;
@@ -632,5 +660,35 @@ a:hover {
     padding: 8px 16px;
     font-size: 0.9em;
     margin-top: 5%;
+  }
+  .step {
+    grid-column: 1;
+    grid-row: 1/-1;
+    height: 300px;
+  }
+  .company {
+    grid-column: 2;
+    grid-row: 1;
+
+    text-align: left;
+  }
+  .responsibilities,
+  .reversed .responsibilities {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+  }
+  .reversed {
+    direction: ltr;
+  }
+  .reversed .company,
+  .company {
+    text-align: left;
+  }
+  .reversed .responsibilities p,
+  .reversed .responsibilities h3,
+  .responsibilities p,
+  .responsibilities h3 {
+    text-align: left;
   }
 }
