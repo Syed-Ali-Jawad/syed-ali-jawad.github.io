@@ -1,131 +1,14 @@
-.navbar {
-  height: 70px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 8px;
-  transition: background-color 1000ms linear;
-  transition: box-shadow 300ms linear;
-  background-color: "transparent";
-}
-.nav-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  height: 100%;
-  justify-self: center;
-  max-width: 1350px;
-  width: 100%;
-}
-.nav-scrolled {
-  background-color: white;
-  box-shadow: 0 2px 2px lightgray;
-}
-.contact-icons-navbar div {
-  cursor: pointer;
-  aspect-ratio: 1;
+html {
+  scroll-padding-top: 70px;
 }
 body {
   overflow-x: hidden;
-}
-.navbar h1 {
-  font-family: "flink-bold", sans-serif;
-
-  font-size: 1.5em;
-}
-.navbar-btns,
-.navbar-btns-menu {
-  display: flex;
-  column-gap: 24px;
-  justify-self: center;
-  white-space: nowrap;
-  font-family: "Calvin-Regular", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 600;
-  color: #141c2d;
-  font-size: 0.95em;
-  padding: 0 30px;
-  box-sizing: border-box;
-}
-
-.centered-container {
-  max-width: 1350px;
-  margin: 0 auto;
-}
-.contact-icons-navbar div img {
-  width: 15px;
-  margin: auto;
-}
-.contact-me-btn {
-  background-color: transparent;
-  width: fit-content;
-  border: 1px solid lightgray;
-  aspect-ratio: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin: auto;
-}
-.contact-me-btn svg {
-  border-radius: 50%;
-}
-.contact-icons-navbar,
-.contact-icons-contact-me {
-  display: flex;
-  column-gap: 12px;
-  justify-self: end;
-}
-.contact-icons-contact-me:hover {
-  cursor: pointer;
-}
-.contact-icons-navbar div,
-.contact-icons-contact-me div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-}
-.tooltip {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  padding: 5px 10px;
-  width: 120px;
-  position: absolute;
-  margin-top: -20px;
-  font-size: 0.8em;
-}
-.contact-icons-navbar div {
-  width: 40px;
-  height: 40px;
-}
-.contact-icons-contact-me div {
-  padding: 0;
-}
-.intro-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin-top: 12rem;
-  text-align: center;
-  gap: 24px;
-}
-.intro-section h1 {
-  font-family: "tt-common-bold", sans-serif;
-  font-size: 2.5em;
-  color: #141c38;
-  margin: 16px;
 }
 .gradient {
   background: linear-gradient(#fffcf4, #ffe1b3);
   max-width: unset;
   width: 100%;
 }
-.intro-section a,
 .projects-section button {
   width: 10%;
   margin: auto;
@@ -137,198 +20,20 @@ body {
   font-weight: bold;
   z-index: 999;
 }
-.intro-section a {
-  width: unset;
-  padding: 12px 16px;
-  font-family: sans-serif;
-  font-size: medium;
-  font-weight: 500;
-}
-.intro-section a:hover,
 .projects-section button:hover {
   opacity: 80%;
   color: white;
 }
-.intro-section p {
-  text-align: justify;
-  width: 55%;
-  margin: auto;
-  color: #8fa4b8;
-  font-size: 1.1em;
-  font-family: sans-serif;
-  margin-bottom: 48px;
-}
-.intro-section h3 {
-  color: #141c38;
-  font-family: sans-serif;
-}
 .home-page {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-}
-.semi-circle-intro {
-  width: 800px;
-  height: 400px;
-  margin: auto;
-  margin-top: 40px;
-  border-radius: 600px 600px 0 0;
-  background-color: #f0a418;
-  margin-top: 120px;
-  position: relative;
-}
-.semi-circle-intro img {
-  /* margin-top: -48.5%;   */
-  scale: 100%;
-  position: absolute;
-  left: 20%;
-  width: 500px;
-  bottom: 0;
-}
-.about-me-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 70%;
-}
-.about-me-details h3 {
-  font-family: sans-serif;
-  font-size: 1.75em;
-  color: #141c38;
-  text-align: center;
 }
 p {
   font-family: sans-serif;
   color: #8fa4b8;
   line-height: 25px;
-}
-.experience-div h3 {
-  font-family: sans-serif;
-  margin: 24px 0;
-}
-.experience-div p {
-  margin: 10px 0;
-}
-.about-me {
-  padding-top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-me-details button {
-  background-color: #fcf4e3;
-  color: #f0a418;
-  width: 15%;
-  border: 0;
-  border-radius: 5px;
-  padding: 12px 0;
-  font-weight: 500;
-  font-size: medium;
-  letter-spacing: 1px;
-  margin: auto;
-  font-family: sans-serif;
-}
-.about-me-details button:hover {
-  background-color: #f0a418;
-  color: white;
-  transition: background-color 500ms linear;
-}
-
-.skill-card {
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  padding: 16px;
-  width: 18%;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.skill-card p {
-  margin: 0;
-}
-.skill-card-logo {
-  border-radius: 10px;
-  transform: rotate(45deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  background-color: #fcf4e3;
-}
-.skill-card-logo div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.skill-card:hover .skill-card-logo {
-  background-color: #f0a418;
-  transition: background-color 500ms linear;
-}
-.skill-card:hover {
-  background: linear-gradient(to right, #fff, #fcf4e3);
-}
-.responsibilities {
-  text-align: right;
-}
-.responsibilities h3 {
-  text-align: end;
-}
-.responsibilities p {
-  text-align: right;
-}
-.company {
-  text-align: left;
-}
-.reversed {
-  direction: rtl;
-}
-.reversed .responsibilities {
-  text-align: left;
-}
-.reversed .responsibilities h3 {
-  text-align: end;
-}
-.reversed .responsibilities p {
-  text-align: left;
-}
-.reversed .company {
-  text-align: right;
-}
-@keyframes icon-rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes icon-flip {
-  0% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(-1);
-  }
-}
-.react-icon svg {
-  animation: icon-rotation 5000ms linear infinite;
-}
-.angular-icon svg {
-  animation: icon-flip 2000ms linear infinite;
-}
-.skill-card:hover .skill-card-logo svg * {
-  fill: white;
-}
-
-.skill-card-logo div {
-  transform: rotate(-45deg);
 }
 .skills-div {
   display: flex;
@@ -342,131 +47,26 @@ p {
 .skills-section {
   display: flex;
   padding-top: 70px;
-
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   width: 70%;
 }
-h1 {
+h1,
+h2 {
   font-family: sans-serif;
   font-size: 1.75em;
   color: #141c38;
 }
-p {
-  font-family: sans-serif;
-}
-.experience-div {
-  display: grid;
-  grid-template-columns: 1fr 5% 1fr;
-  height: 100%;
-  width: 80%;
-  margin: auto;
-}
-
-.company img {
-  border-radius: 50%;
-  width: 50px;
-}
-.step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 180px;
-}
-.vertical-line {
-  border-right: 4px dashed lightgray;
-  height: 100%;
-  border-left: 0;
-}
-.outer-circle {
-  width: 20px;
-  height: 25px;
-  border: 2px dashed lightgray;
-  border-radius: 50%;
-  background-color: white;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.inner-circle {
-  width: 10px;
-  height: 10px;
-  border: 0;
-  border-radius: 50%;
-  background-color: #f0a418;
-  z-index: 1;
-}
-.nav-btns-list {
-  display: none;
-}
-.experiences {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 80px auto 0;
-  background-color: #f9fafb;
-  width: 100%;
-  padding: 80px 0 64px;
-  row-gap: 30px;
-}
-.experiences h1 {
-  margin: auto;
-}
-.experiences-div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-}
-.project-card {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  padding: 16px;
-  border-radius: 20px;
-
-  border: 1px solid rgba(240, 164, 24, 0.25);
-
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
-}
-
-.project-card:hover {
-  background: linear-gradient(to bottom, #f9dfa5 0%, white 70%);
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.about-me-details p {
-  text-align: center;
-}
-
-.project-card h2 {
-  font-family: sans-serif;
-}
-.project-card:hover .project-open-icon-svg {
-  fill: #f0a418;
-}
-.project-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  border-radius: 20px;
-  height: 200px;
-  width: 100%;
+.centered-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .projects::after {
   content: "";
   width: 34%;
-}
-
-.project-card:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 5px lightgray;
 }
 .projects-section {
   display: flex;
@@ -476,6 +76,10 @@ p {
   padding: 70px 0;
   row-gap: 40px;
 }
+.projects-section h1{
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   color: #141c2d;
@@ -492,7 +96,6 @@ h4 {
   position: fixed;
   bottom: 4%;
   right: 3%;
-  /* transition: background-color 10000ms linear; */
 }
 .upward-arrow:hover {
   cursor: pointer;
@@ -510,100 +113,19 @@ a:hover {
 .contact-icons {
   display: flex;
 }
-.contact-me {
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-  background-color: #162132;
-  color: white;
 
-  font-family: sans-serif;
-}
-.contact-me .centered-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 10%;
-}
-.contact-btn-navbar {
-  background-color: #f9fafb;
-  border: 1px solid lightgray;
-}
-.nav-scrolled .contact-btn-navbar {
-  background-color: #f0a418;
-  transition: background-color 300ms linear;
-}
-.contact-icons-navbar .menu-icon {
-  display: none;
-}
-.contact-btn-navbar svg {
-  fill: darkgray;
-}
-.nav-scrolled .contact-btn-navbar svg {
-  fill: white;
-}
 @media screen and (max-width: 768px) {
-  .navbar {
-    height: 50px;
-    gap: 24px;
-
-    background-color: white;
-    box-shadow: 0 2px 2px lightgray;
-  }
-  .nav-content {
-    grid-template-columns: 1fr 1fr;
-  }
-  .contact-btn-navbar svg {
-    fill: white;
-  }
-  .about-me-details button {
-    width: 40%;
-    padding: 12px 0;
-  }
-  .about-me-details {
-    display: block;
-    width: 80%;
-    /* padding: 0 24px; */
-  }
-  .about-me-details p {
-    text-align: left;
-  }
-  .about-me-details h3 {
-    text-align: left;
-  }
   .skills-div {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
   }
-  .skill-card {
-    width: 80%;
-    margin: auto;
-    grid-template-columns: 15% 1fr;
-    padding: 24px;
-    gap: 24px;
-  }
   .skills-section {
     display: block;
-
     width: 80%;
-  }
-  .experiences {
-    display: block;
-    padding: 50px 0;
   }
   .upward-arrow {
     display: none;
-  }
-  .experiences h1 {
-    margin-left: 24px;
-    margin-bottom: 40px;
-  }
-  .experience-div {
-    grid-template-columns: 10% 1fr;
-    height: 100%;
-    width: 80%;
-    gap: 24px;
-    grid-template-rows: 110px 1fr;
   }
   .projects {
     margin-left: -20px;
@@ -620,129 +142,17 @@ a:hover {
     margin: auto;
     width: 80%;
   }
-
-  .project-card {
-    width: 100%;
-    padding: 24px;
-  }
   .projects-section button {
     width: 40%;
     margin-top: 32px;
     padding: 12px 0;
-
     color: white;
     font-weight: bold;
-  }
-  .contact-me {
-    column-gap: 24px;
-  }
-  .contact-me h2 {
-    font-size: 1.25em;
   }
   h1 {
     font-size: 1.5em;
   }
-  .intro-section {
-    padding-top: 24px;
-    width: 100vw;
-  }
-
-  .semi-circle-intro {
-    width: 300px;
-    height: 150px;
-  }
-  .semi-circle-intro img {
-    margin-top: -114.5%;
-    width: 250px;
-    margin-left: -13.5%;
-  }
-  .intro-section p {
-    width: 90%;
-  }
-
   h1 {
     font-size: 1.75em;
-  }
-  .experience-div p {
-    font-size: 0.9em;
-  }
-  .navbar h1 {
-    font-size: 1.25em;
-  }
-  .intro-section h1 {
-    font-family: "tt-common-bold", sans-serif;
-    font-size: 2em;
-    color: #141c38;
-  }
-  .intro-section p {
-    font-size: 1em;
-    text-align: center;
-  }
-  .project-card h2 {
-    font-size: 1.25em;
-  }
-  .navbar-btns {
-    display: none;
-  }
-
-  .contact-icons-navbar .menu-icon {
-    display: flex;
-  }
-  .nav-btns-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    list-style: none;
-    /* margin-left: 12%; */
-    background-color: white;
-    width: 100vw;
-    position: fixed;
-    top: 55px;
-    z-index: 1000;
-    gap: 10px;
-    box-shadow: 0px 2px 2px lightgray;
-    padding: 15px 25px;
-  }
-  .contact-btn-navbar {
-    background-color: #f0a418;
-  }
-  .intro-section a {
-    padding: 8px 16px;
-    font-size: 0.9em;
-    /* margin-top: 40px; */
-  }
-  .intro-section {
-    margin-top: 8rem;
-    gap: 0px;
-  }
-  .step {
-    grid-column: 1;
-    grid-row: 1/-1;
-    height: 300px;
-  }
-  .company {
-    grid-column: 2;
-    grid-row: 1;
-
-    text-align: left;
-  }
-  .responsibilities,
-  .reversed .responsibilities {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: left;
-  }
-  .reversed {
-    direction: ltr;
-  }
-  .reversed .company,
-  .company {
-    text-align: left;
-  }
-  .reversed .responsibilities p,
-  .reversed .responsibilities h3,
-  .responsibilities p,
-  .responsibilities h3 {
-    text-align: left;
   }
 }

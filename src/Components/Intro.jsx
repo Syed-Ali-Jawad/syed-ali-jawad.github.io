@@ -1,15 +1,16 @@
 import { AngularColored, ReactBlueIcon } from "../assets/icons";
 import ReactTypingEffect from "react-typing-effect";
 import IntroPic from "../assets/my pic for intro.png";
+import "../styles/Intro.css";
 
 export default function Intro() {
   return (
-    <header className="intro-section centered-container">
+    <header className='intro-section centered-container'>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="react-icon">
+        <div className='react-icon'>
           <ReactBlueIcon />
         </div>
-        <div className="angular-icon">
+        <div className='angular-icon'>
           <AngularColored />
         </div>
       </div>
@@ -33,10 +34,10 @@ export default function Intro() {
         modern technologies, I thrive on solving challenges and embracing
         innovation in the ever-evolving field of frontend development.
       </p>
-      <a href="/CV - Ali Jawad.pdf" download>
-        Download My CV
+      <a href='/Resume - Ali Jawad.pdf' download>
+        Download My Resume
       </a>
-      <div className="semi-circle-intro">
+      <div className='semi-circle-intro'>
         <img src={IntroPic} />
       </div>
     </header>

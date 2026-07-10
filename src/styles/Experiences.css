@@ -1,0 +1,183 @@
+.responsibilities {
+  text-align: right;
+}
+
+.responsibilities h3 {
+  text-align: end;
+}
+
+.responsibilities p {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.experiences h2 {
+  text-align: center;
+}
+
+.company {
+  text-align: left;
+}
+
+.company img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.reversed {
+  direction: rtl;
+}
+
+.reversed .responsibilities {
+  text-align: left;
+}
+
+.reversed .responsibilities h3 {
+  text-align: end;
+}
+
+.reversed .responsibilities p {
+  text-align: left;
+}
+
+.reversed .company {
+  text-align: right;
+}
+
+.experience-div {
+  display: grid;
+  grid-template-columns: 1fr 5% 1fr;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.experience-div h3 {
+  font-family: sans-serif;
+  margin: 24px 0;
+}
+
+.experience-div p {
+  margin: 10px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+
+.vertical-line {
+  border-right: 4px dashed lightgray;
+  height: 100%;
+  display: flex;
+  border-left: 0;
+}
+
+.outer-circle {
+  width: 20px;
+  height: 25px;
+  border: 2px dashed lightgray;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #f0a418;
+  z-index: 1;
+}
+
+.experiences {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 80px auto 0;
+  background-color: #f9fafb;
+  width: 100%;
+  padding: 80px 0 64px;
+  row-gap: 30px;
+}
+
+.experiences h2 {
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.experiences-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .experiences {
+    display: block;
+    padding: 50px 0;
+  }
+
+  .experiences h2 {
+    margin-left: 24px;
+    margin-bottom: 40px;
+  }
+
+  .experience-div {
+    grid-template-columns: 10% 1fr;
+    height: 100%;
+    width: 80%;
+    gap: 24px;
+    grid-template-rows: 110px 1fr;
+  }
+
+  .experiences h2 {
+    text-align: left;
+  }
+
+  .experience-div p {
+    font-size: 0.9em;
+  }
+
+  .step {
+    grid-column: 1;
+    grid-row: 1/-1;
+    min-height: 300px;
+  }
+
+  .company {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .responsibilities,
+  .reversed .responsibilities {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .reversed {
+    direction: ltr;
+  }
+
+  .reversed .company,
+  .company {
+    text-align: left;
+  }
+
+  .reversed .responsibilities p,
+  .reversed .responsibilities h3,
+  .responsibilities p,
+  .responsibilities h3 {
+    text-align: left;
+  }
+}

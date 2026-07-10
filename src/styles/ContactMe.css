@@ -1,0 +1,70 @@
+.contact-me {
+  width: 100%;
+  background-color: #162132;
+  color: white;
+  font-family: sans-serif;
+}
+
+.contact-me h2 {
+  color: white;
+}
+
+.contact-me .centered-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+}
+
+.contact-icons-contact-me {
+  display: flex;
+  column-gap: 12px;
+  justify-self: end;
+}
+
+.contact-icons-contact-me:hover {
+  cursor: pointer;
+}
+
+.contact-icons-contact-me div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.contact-me-btn {
+  background-color: transparent;
+  width: fit-content;
+  border: 1px solid lightgray;
+  aspect-ratio: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: auto;
+}
+
+.contact-me-btn svg {
+  border-radius: 50%;
+}
+
+.tooltip {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 120px;
+  position: absolute;
+  margin-top: -20px;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-me {
+    column-gap: 24px;
+  }
+
+  .contact-me h2 {
+    font-size: 1.25em;
+  }
+}

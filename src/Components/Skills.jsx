@@ -11,6 +11,7 @@ import {
   TypeScriptIcon,
 } from "../assets/icons";
 import SkillCard from "./SkillCard";
+import "../styles/Skills.css"
 
 export default function Skills() {
   const skills = [
@@ -53,7 +54,7 @@ export default function Skills() {
   ];
   return (
     <div className='skills-section'>
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <div className='skills-div'>
         {skills.map((skill, index) => (
           <SkillCard key={index} {...skill} />

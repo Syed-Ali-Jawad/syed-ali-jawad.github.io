@@ -1,3 +1,5 @@
+import "../styles/Experiences.css";
+
 export default function AddExerience({
   logo,
   company,
@@ -8,18 +10,18 @@ export default function AddExerience({
 }) {
   return (
     <div className={`experience-div ${id % 2 !== 0 ? "reversed" : ""}`}>
-      <div className="responsibilities" style={{}}>
+      <div className='responsibilities' style={{}}>
         <h3>{positon}</h3>
         <p>{description}</p>
       </div>
-      <div className="step">
-        <div className="outer-circle">
-          <div className="inner-circle"></div>
+      <div className='step'>
+        <div className='outer-circle'>
+          <div className='inner-circle'></div>
         </div>
-        <hr className="vertical-line" />
+        <hr className='vertical-line' />
       </div>
 
-      <div className="company">
+      <div className='company'>
         <img src={logo} />
         <h3>{company}</h3>
         <p>{periodServed}</p>

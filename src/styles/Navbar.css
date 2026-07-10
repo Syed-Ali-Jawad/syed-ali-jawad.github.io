@@ -1,24 +1,28 @@
+html {
+  scroll-padding-top: 70px;
+}
+
 .navbar {
   height: 70px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0.5%;
-  background-color: transparent;
+  padding: 8px;
   transition:
     background-color 100ms linear,
     box-shadow 300ms linear;
+  background-color: transparent;
 }
 
 .nav-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-self: center;
   height: 100%;
-  width: 100%;
+  justify-self: center;
   max-width: 1350px;
+  width: 100%;
 }
 
 .nav-scrolled {
@@ -26,7 +30,7 @@
   box-shadow: 0 2px 2px lightgray;
 }
 
-.navbar h1 {
+.navbar h2 {
   font-family: "flink-bold", sans-serif;
   font-size: 1.5em;
 }
@@ -34,44 +38,31 @@
 .navbar-btns,
 .navbar-btns-menu {
   display: flex;
+  column-gap: 24px;
   justify-self: center;
-  column-gap: 5%;
   white-space: nowrap;
   font-family: "Calvin-Regular", sans-serif;
   letter-spacing: 1px;
   font-weight: 600;
   color: #141c2d;
   font-size: 0.95em;
-}
-
-.navbar-btns a {
-  text-decoration: none;
-  color: #141c2d;
-}
-
-.navbar-btns a:hover {
-  color: #f0a418;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .contact-icons-navbar {
   display: flex;
+  column-gap: 12px;
   justify-self: end;
-  column-gap: 5%;
 }
 
 .contact-icons-navbar div {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 100%;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.contact-icons-navbar div img {
-  width: 15px;
-  margin: auto;
 }
 
 .contact-btn-navbar {
@@ -92,7 +83,7 @@
   fill: white;
 }
 
-.contact-icons-navbar .menu-icon {
+.menu-icon {
   display: none;
 }
 
@@ -100,32 +91,35 @@
   display: none;
 }
 
-/* Mobile */
-
 @media screen and (max-width: 768px) {
   .navbar {
     height: 50px;
-
-    gap: 15%;
+    gap: 24px;
     background-color: white;
     box-shadow: 0 2px 2px lightgray;
   }
 
-  .nav-content {
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
+  .modal-overlay {
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 100;
+    opacity: 0.3;
   }
 
-  .navbar h1 {
+  .nav-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar h2 {
     font-size: 1.25em;
   }
 
   .navbar-btns {
     display: none;
-  }
-
-  .contact-btn-navbar {
-    background-color: #f0a418;
   }
 
   .contact-btn-navbar svg {
@@ -136,18 +130,22 @@
     display: flex;
   }
 
+  .contact-btn-navbar {
+    background-color: #f0a418;
+  }
+
   .nav-btns-list {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     list-style: none;
+    background-color: white;
+    width: 100vw;
     position: fixed;
     top: 55px;
-    width: 100vw;
-    padding: 15px 25px;
-    gap: 10px;
-    background-color: white;
-    box-shadow: 0 2px 2px lightgray;
     z-index: 1000;
+    gap: 10px;
+    box-shadow: 0px 2px 2px lightgray;
+    padding: 15px 25px;
   }
 }

@@ -1,0 +1,48 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(240, 164, 24, 0.25);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card:hover {
+  background: linear-gradient(to bottom, #f9dfa5 0%, white 70%);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px lightgray;
+}
+
+.project-card h2 {
+  font-family: sans-serif;
+}
+
+.project-card:hover .project-open-icon-svg {
+  fill: #f0a418;
+}
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 20px;
+  height: 200px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .project-card h2 {
+    font-size: 1.25em;
+  }
+}

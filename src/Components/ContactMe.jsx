@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/ContactMe.css";
 
 export default function ContactMe() {
   const [numbereCopied, setNumberCopied] = useState(false);

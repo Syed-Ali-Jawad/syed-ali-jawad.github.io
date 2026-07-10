@@ -25,18 +25,18 @@ export default function HomePage() {
   }, []);
   return (
     <>
-      <div className="home-page" id="intro">
-        <div className="gradient">
+      <div className='home-page' id='intro'>
+        <div className='gradient'>
           <NavBar scrolled={scrolled} />
 
           <Intro />
         </div>
         <AboutMe />
         <Skills />
-        <Experiences id="experience" />
-        <div className="projects-section centered-container" id="projects">
-          <h1>My Work & Projects</h1>
-          <div className="projects">
+        <Experiences />
+        <div className='projects-section centered-container' id='projects'>
+          <h2>My Work & Projects</h2>
+          <div className='projects'>
             <ProjectCard {...projects[0]} />
             <ProjectCard {...projects[1]} />
           </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
       </div>
       <ContactMe />
       {showGoToTop ? (
-        <div className="upward-arrow" onClick={() => window.scrollTo(0, 0)}>
+        <div className='upward-arrow' onClick={() => window.scrollTo(0, 0)}>
           <UpwardArrow />
         </div>
       ) : null}

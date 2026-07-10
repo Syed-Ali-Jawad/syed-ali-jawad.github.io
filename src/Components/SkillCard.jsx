@@ -1,3 +1,5 @@
+import "../styles/Skills.css";
+
 export default function SkillCard({ logo, skill }) {
   return (
     <div className='skill-card'>

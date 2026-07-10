@@ -3,6 +3,7 @@ import AddExerience from "./AddExperience";
 import SystemsLogo from "../assets/Systems logo.jpeg";
 import VolpeaLogo from "../assets/Volpea logo.jpeg";
 import EmumbaLogo from "../assets/Emumba Logo.png";
+import "../styles/Experiences.css";
 const experiences = [
   {
     id: 1,
@@ -20,7 +21,7 @@ const experiences = [
     periodServed: "August 2024 - October 2024",
     positon: "Trainee Frontend Developer",
     description:
-      "Learned Angular by applying and practicng on an ecommerce webiste. Currently working on a live project.",
+      "Worked on Real Estate Angular project, resolving different bugs and integrated new features. Learned and applied Angular by developing a practice project of a clothing e-commerce website.",
   },
   {
     id: 3,
@@ -36,9 +37,7 @@ export default function Experiences() {
   return (
     <div className='experiences' id='experience'>
       <div className='centered-container'>
-        <h1 style={{ textAlign: "center", marginBottom: "30px" }}>
-          Experiences
-        </h1>
+        <h2>Experiences</h2>
         <div className='experiences-div'>
           {experiences.map((experince, index) => (
             <AddExerience key={index} {...experince} />

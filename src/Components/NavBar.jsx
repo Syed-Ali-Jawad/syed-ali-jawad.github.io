@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Hamburger } from "../assets/icons";
+import "../styles/Navbar.css";
 
 export default function NavBar({ scrolled }) {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -11,9 +12,9 @@ export default function NavBar({ scrolled }) {
   return (
     <>
       <nav className={`navbar ${scrolled ? "nav-scrolled" : ""}`}>
-        <div className='nav-content'>
+        <div className='nav-content centered-container'>
           <HashLink smooth to='/#intro'>
-            <h1>Ali Jawad</h1>
+            <h2>Ali Jawad</h2>
           </HashLink>
           <div className='navbar-btns'>
             <HashLink smooth to='/#intro'>
@@ -93,23 +94,26 @@ export default function NavBar({ scrolled }) {
         </div>
       </nav>
       {isMenuClicked ? (
-        <div className='nav-btns-list navbar-btns-menu'>
-          <HashLink onClick={toggleMenu} smooth to='/#intro'>
-            Home
-          </HashLink>
-          <HashLink onClick={toggleMenu} smooth to='/#about-me'>
-            About Me
-          </HashLink>
-          <HashLink onClick={toggleMenu} smooth to='/#experience'>
-            Experience
-          </HashLink>
-          <HashLink onClick={toggleMenu} smooth to='/projects#list'>
-            Projects
-          </HashLink>
+        <div>
+          <div className='nav-btns-list navbar-btns-menu'>
+            <HashLink onClick={toggleMenu} smooth to='/#intro'>
+              Home
+            </HashLink>
+            <HashLink onClick={toggleMenu} smooth to='/#about-me'>
+              About Me
+            </HashLink>
+            <HashLink onClick={toggleMenu} smooth to='/#experience'>
+              Experience
+            </HashLink>
+            <HashLink onClick={toggleMenu} smooth to='/projects#list'>
+              Projects
+            </HashLink>
 
-          <HashLink onClick={toggleMenu} smooth to='#contact-me'>
-            Contact Me
-          </HashLink>
+            <HashLink onClick={toggleMenu} smooth to='#contact-me'>
+              Contact Me
+            </HashLink>
+          </div>
+          <div className='modal-overlay' />
         </div>
       ) : null}
     </>
