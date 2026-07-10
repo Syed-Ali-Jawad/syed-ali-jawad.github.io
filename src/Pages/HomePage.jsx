@@ -34,7 +34,7 @@ export default function HomePage() {
         <AboutMe />
         <Skills />
         <Experiences id="experience" />
-        <div className="projects-section" id="projects">
+        <div className="projects-section centered-container" id="projects">
           <h1>My Work & Projects</h1>
           <div className="projects">
             <ProjectCard {...projects[0]} />

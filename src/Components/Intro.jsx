@@ -4,7 +4,7 @@ import IntroPic from "../assets/my pic for intro.png";
 
 export default function Intro() {
   return (
-    <div className="intro-section">
+    <header className="intro-section centered-container">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="react-icon">
           <ReactBlueIcon />
@@ -39,6 +39,6 @@ export default function Intro() {
       <div className="semi-circle-intro">
         <img src={IntroPic} />
       </div>
-    </div>
+    </header>
   );
 }

@@ -74,11 +74,14 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <div id="list">
+      <div id='list'>
         <NavBar scrolled={true} />
-        <div className="projects-section" style={{ marginTop: "3%" }}>
+        <div
+          className='projects-section centered-container'
+          style={{ marginTop: "3%" }}
+        >
           <h1>My Work & Projects</h1>
-          <div className="projects">
+          <div className='projects'>
             {projects.map((project) => (
               <ProjectCard {...project} />
             ))}
@@ -88,7 +91,7 @@ export default function ProjectsPage() {
         <ContactMe />
       </div>
       {showGoToTop ? (
-        <div className="upward-arrow" onClick={() => window.scrollTo(0, 0)}>
+        <div className='upward-arrow' onClick={() => window.scrollTo(0, 0)}>
           <UpwardArrow />
         </div>
       ) : null}

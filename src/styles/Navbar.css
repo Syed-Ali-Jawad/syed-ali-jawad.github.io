@@ -1,0 +1,153 @@
+.navbar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5%;
+  background-color: transparent;
+  transition:
+    background-color 100ms linear,
+    box-shadow 300ms linear;
+}
+
+.nav-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1350px;
+}
+
+.nav-scrolled {
+  background-color: white;
+  box-shadow: 0 2px 2px lightgray;
+}
+
+.navbar h1 {
+  font-family: "flink-bold", sans-serif;
+  font-size: 1.5em;
+}
+
+.navbar-btns,
+.navbar-btns-menu {
+  display: flex;
+  justify-self: center;
+  column-gap: 5%;
+  white-space: nowrap;
+  font-family: "Calvin-Regular", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #141c2d;
+  font-size: 0.95em;
+}
+
+.navbar-btns a {
+  text-decoration: none;
+  color: #141c2d;
+}
+
+.navbar-btns a:hover {
+  color: #f0a418;
+}
+
+.contact-icons-navbar {
+  display: flex;
+  justify-self: end;
+  column-gap: 5%;
+}
+
+.contact-icons-navbar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contact-icons-navbar div img {
+  width: 15px;
+  margin: auto;
+}
+
+.contact-btn-navbar {
+  background-color: #f9fafb;
+  border: 1px solid lightgray;
+}
+
+.contact-btn-navbar svg {
+  fill: darkgray;
+}
+
+.nav-scrolled .contact-btn-navbar {
+  background-color: #f0a418;
+  transition: background-color 300ms linear;
+}
+
+.nav-scrolled .contact-btn-navbar svg {
+  fill: white;
+}
+
+.contact-icons-navbar .menu-icon {
+  display: none;
+}
+
+.nav-btns-list {
+  display: none;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 50px;
+
+    gap: 15%;
+    background-color: white;
+    box-shadow: 0 2px 2px lightgray;
+  }
+
+  .nav-content {
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+  }
+
+  .navbar h1 {
+    font-size: 1.25em;
+  }
+
+  .navbar-btns {
+    display: none;
+  }
+
+  .contact-btn-navbar {
+    background-color: #f0a418;
+  }
+
+  .contact-btn-navbar svg {
+    fill: white;
+  }
+
+  .contact-icons-navbar .menu-icon {
+    display: flex;
+  }
+
+  .nav-btns-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    top: 55px;
+    width: 100vw;
+    padding: 15px 25px;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0 2px 2px lightgray;
+    z-index: 1000;
+  }
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AddExerience from "./AddExperience";
 import SystemsLogo from "../assets/Systems logo.jpeg";
 import VolpeaLogo from "../assets/Volpea logo.jpeg";
+import EmumbaLogo from "../assets/Emumba Logo.png";
 const experiences = [
   {
     id: 1,
@@ -16,20 +17,33 @@ const experiences = [
     id: 2,
     logo: VolpeaLogo,
     company: "Volpea Solutions",
-    periodServed: "5 Aug - Present",
+    periodServed: "August 2024 - October 2024",
     positon: "Trainee Frontend Developer",
     description:
       "Learned Angular by applying and practicng on an ecommerce webiste. Currently working on a live project.",
   },
+  {
+    id: 3,
+    logo: EmumbaLogo,
+    company: "Emumba",
+    periodServed: "Nov 2024 - July 2026",
+    positon: "Software Engineer II",
+    description:
+      "Contributed to InterWiz AI, an AI-based interviewing platform, worked on product development, frontend features, bug fixes, and it’s website. Maintained and improved Emumba’s official marketing website, ensuring responsive design, UI consistency, and performance stability",
+  },
 ];
 export default function Experiences() {
   return (
-    <div className="experiences" id="experience">
-      <h1>Experiences</h1>
-      <div className="experiences-div">
-        {experiences.map((experince, index) => (
-          <AddExerience key={index} {...experince} />
-        ))}
+    <div className='experiences' id='experience'>
+      <div className='centered-container'>
+        <h1 style={{ textAlign: "center", marginBottom: "30px" }}>
+          Experiences
+        </h1>
+        <div className='experiences-div'>
+          {experiences.map((experince, index) => (
+            <AddExerience key={index} {...experince} />
+          ))}
+        </div>
       </div>
     </div>
   );
